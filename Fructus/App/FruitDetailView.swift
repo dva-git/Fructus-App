@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FruitDetailView: View {
     // MARK: - PROPERTIES
-    
     var fruit: Fruit
     
     // MARK: - BODY
@@ -36,7 +35,7 @@ struct FruitDetailView: View {
                             .multilineTextAlignment(.leading)
                         
                         // NUTRIENTS
-                        
+                        FruitNutrietsView(fruit: fruit)
                         
                         // SUBHEADLINE
                         Text("Learn more about \(fruit.title)".uppercased())
@@ -68,6 +67,7 @@ struct FruitDetailView: View {
             .ignoresSafeArea()
             
         } //: Navigation
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 }
